@@ -1,0 +1,49 @@
+<canvas width="400" height="400"></canvas>
+
+<script>
+    var tela = document.querySelector('canvas');
+    var pincel = tela.getContext('2d');
+
+    function desenhaQuadrado(x, y, tamanho, cor) {
+
+        pincel.fillStyle = cor;
+        pincel.fillRect(x, y, 50, tamanho);
+        pincel.fillStroke = 'black';
+        pincel.strokeRect(x, y, 50, tamanho);
+    }
+    function escreveTexto(texto, x, y) {
+        pincel.font = '20px Georgia';
+        pincel.fillStyle = 'black';
+        pincel.fillText(texto, x, y);
+    }
+
+    escreveTexto('Navegadores mais usados:', 100, 50);
+
+    //2015  
+    escreveTexto('2015', 100, 90);
+    desenhaQuadrado(100, 100, 50, 'blue');//chrome
+    desenhaQuadrado(100, 150, 25, 'green')//firefox
+    desenhaQuadrado(100, 175, 20, 'yellow')//safari
+    desenhaQuadrado(100, 195, 5, 'red')//outros
+
+    //2016
+    escreveTexto('2016', 200, 90);
+    desenhaQuadrado(200, 100, 65, 'blue');//chrome
+    desenhaQuadrado(200, 165, 20, 'green')//firefox
+    desenhaQuadrado(200, 185, 13, 'yellow')//safari
+    desenhaQuadrado(200, 198, 2, 'red')//outros
+
+    //Legenda
+    escreveTexto('Legenda:', 100, 240);
+    escreveTexto('Chrome', 170, 275);
+    escreveTexto('Firefox', 170, 315);
+    escreveTexto('Safara', 170, 355);
+    escreveTexto('Outros', 170, 395);
+    desenhaQuadrado(100, 260, 20, 'blue');//chrome
+    desenhaQuadrado(100, 300, 20, 'green')//firefox
+    desenhaQuadrado(100, 340, 20, 'yellow')//safari
+    desenhaQuadrado(100, 380, 20, 'red')//outros
+
+
+
+</script>
